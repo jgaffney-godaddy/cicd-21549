@@ -1,0 +1,5 @@
+*.log
+license.txt
+readme.html
+sitemap.xml.gz
+**vendor**
