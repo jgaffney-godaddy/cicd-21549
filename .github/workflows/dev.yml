@@ -18,10 +18,10 @@ jobs:
         run: |
           echo "We made it through the tests! Let's deploy to staging!"
       - name: Run deploy
-        uses: pagely/action-deploy@v1
+        uses: godaddy-wordpress/mwcs-deploy-action@v1
         with:
-          PAGELY_DEPLOY_DEST: "/httpdocs/"
-          PAGELY_INTEGRATION_SECRET: ${{secrets.PAGELY_INTEGRATION_SECRET}}
-          PAGELY_INTEGRATION_ID: "Z8hBrFjcEVBNmLvFYhyZ76"
-          PAGELY_APP_ID: "21529"
-          PAGELY_WORKING_DIR: ${{github.workspace}}
+          MWCS_DEPLOY_DEST: "/httpdocs"
+          MWCS_INTEGRATION_SECRET: ${{secrets.MWCS_INTEGRATION_SECRET}}
+          MWCS_INTEGRATION_ID: "Z8hBrFjcEVBNmLvFYhyZ76"
+          MWCS_APP_ID: "21529"
+          MWCS_WORKING_DIR: ${{github.workspace}}
