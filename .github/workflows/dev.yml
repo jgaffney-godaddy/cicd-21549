@@ -20,7 +20,7 @@ jobs:
       - name: Run deploy
         uses: godaddy-wordpress/mwcs-deploy-action@v1
         with:
-          MWCS_DEPLOY_DEST: "/httpdocs"
+          MWCS_DEPLOY_DEST: "/httpdocs/wp-content/cicd"
           MWCS_INTEGRATION_SECRET: ${{secrets.MWCS_INTEGRATION_SECRET}}
           MWCS_INTEGRATION_ID: "Z8hBrFjcEVBNmLvFYhyZ76"
           MWCS_APP_ID: "21529"
