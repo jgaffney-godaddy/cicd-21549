@@ -1,0 +1,27 @@
+name: "dev"
+on:
+  push:
+jobs:
+  deploy:
+    name: Run dev tests
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: What does this workflow do?
+        run: |
+          echo "We're running a test, and if successful deploy to staging."
+      - name: List the workspace dir files/fodlers
+        run: |
+          ls -ld ${{github.workspace}}
+      - name: How did we do?
+        run: |
+          echo "We made it through the tests! Let's deploy to staging!"
+      - name: Run deploy
+        uses: pagely/action-deploy@v1
+        with:
+          PAGELY_DEPLOY_DEST: "/httpdocs/"
+          PAGELY_INTEGRATION_SECRET: ${{secrets.PAGELY_INTEGRATION_SECRET}}
+          PAGELY_INTEGRATION_ID: "Z8hBrFjcEVBNmLvFYhyZ76"
+          PAGELY_APP_ID: "21529"
+          PAGELY_WORKING_DIR: ${{github.workspace}}
