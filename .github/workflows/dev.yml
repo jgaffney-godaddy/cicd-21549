@@ -25,3 +25,4 @@ jobs:
           MWCS_INTEGRATION_ID: "Z8hBrFjcEVBNmLvFYhyZ76"
           MWCS_APP_ID: "21529"
           MWCS_WORKING_DIR: ${{github.workspace}}
+          MWCS_API_URL: "https://mgmt.nstk.net/api"
