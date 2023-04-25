@@ -1,6 +1,8 @@
 name: "dev"
 on:
   push:
+env:
+  MWCS_API_URL: "https://mgmt.nstk.net/api"
 jobs:
   deploy:
     name: Run dev tests
@@ -25,4 +27,3 @@ jobs:
           MWCS_INTEGRATION_ID: "uQjdB6PdwSHob7ZTcpzpqa"
           MWCS_APP_ID: "21549"
           MWCS_WORKING_DIR: ${{github.workspace}}
-          MWCS_API_URL: "https://mgmt.nstk.net/api"
