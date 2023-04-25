@@ -22,7 +22,7 @@ jobs:
         with:
           MWCS_DEPLOY_DEST: "/httpdocs/wp-content/cicd"
           MWCS_INTEGRATION_SECRET: ${{secrets.MWCS_INTEGRATION_SECRET}}
-          MWCS_INTEGRATION_ID: "FNtmzoTuk77f2CUAHVV4bT"
-          MWCS_APP_ID: "21517"
+          MWCS_INTEGRATION_ID: "uQjdB6PdwSHob7ZTcpzpqa"
+          MWCS_APP_ID: "21549"
           MWCS_WORKING_DIR: ${{github.workspace}}
           MWCS_API_URL: "https://mgmt.nstk.net/api"
